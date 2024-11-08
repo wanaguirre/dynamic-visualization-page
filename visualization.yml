@@ -1,0 +1,13 @@
+name: visualization
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pandas
+  - plotly
+  - geopandas
+  - pyproj
+  - shapely
+  - fiona
+  - jsonschema
+  - jupyterlab
