@@ -1,2 +1,4 @@
 # Ignore all CSV files
 *.csv
+*.xlsx
+*.zip
