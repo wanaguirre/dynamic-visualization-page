@@ -169,4 +169,4 @@ fig.update_layout(
 fig.show()
 
 # Save the figure as an HTML file
-fig.write_html("charts/flow_map_chart.html")
+fig.write_html("charts/flow_map.html")
