@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación de Técnicas de Visualización</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .section {
+            padding: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+        }
+        .content img {
+            max-width: 100px;
+            margin-right: 15px;
+        }
+        .plot-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Presentación de Técnicas de Visualización: PEC 2</h1>
+
+    <!-- Introducción -->
+    <div class="section">
+        <h2>Introducción</h2>
+        <p>En esta presentación, exploraremos tres técnicas de visualización: la Pirámide, el Mapa de Flujo y el Gráfico de Horizonte. A través de estas técnicas, buscaremos entender cómo los datos se pueden presentar de manera efectiva para resaltar patrones, tendencias y relaciones.</p>
+    </div>
+
+    <!-- Sección de la Pirámide -->
+    <div class="section" id="pyramid">
+        <h2>Pirámide de Emisiones de Carbono</h2>
+        <div class="content">
+            <img src="examples/ruta-a-tu-imagen-piramide.jpg" alt="Ejemplo de Pirámide">
+            <p><strong>Origen:</strong> La pirámide es una técnica de visualización que suele utilizarse para representar proporciones entre distintas categorías. En este caso, la visualización se centra en las emisiones de carbono, divididas en tres categorías: Scope 1, Scope 2 y Scope 3.</p>
+        </div>
+        <p><strong>Pros y Contras:</strong> La pirámide es efectiva para comparar proporciones, pero no permite ver cambios en el tiempo de forma detallada.</p>
+        <p><strong>Aplicaciones:</strong> Se utiliza comúnmente en análisis de sostenibilidad, especialmente en informes ambientales que desglosan las emisiones en categorías.</p>
+        <p><strong>Datos utilizados:</strong> Los datos representan las emisiones de carbono en los diferentes scopes. Las emisiones son cuantitativas y se representan en proporciones para visualizar su impacto relativo.</p>
+
+        <div class="plot-container">
+            <!-- Inserta el archivo HTML de la visualización de la pirámide -->
+            <iframe src="charts/pyramid_chart.html" width="100%" height="500px" style="border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Sección del Mapa de Flujo -->
+    <div class="section" id="flow-map">
+        <h2>Mapa de Flujo de Inversiones</h2>
+        <div class="content">
+            <img src="examples/ruta-a-tu-imagen-flujo.jpg" alt="Ejemplo de Mapa de Flujo">
+            <p><strong>Origen:</strong> El mapa de flujo es una técnica que permite visualizar la dirección y magnitud de las relaciones entre ubicaciones geográficas, ideal para análisis de inversiones internacionales o comercio.</p>
+        </div>
+        <p><strong>Pros y Contras:</strong> Permite una visualización clara de los flujos, pero puede complicarse con un gran número de conexiones.</p>
+        <p><strong>Aplicaciones:</strong> Se usa en economía para analizar inversiones y flujos comerciales entre países.</p>
+        <p><strong>Datos utilizados:</strong> Datos geográficos de origen y destino de inversiones, junto con el porcentaje de inversión, lo que permite representar magnitudes relativas de los flujos.</p>
+
+        <div class="plot-container">
+            <!-- Inserta el archivo HTML de la visualización del mapa de flujo -->
+            <iframe src="charts/flow_map.html" width="100%" height="500px" style="border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Sección del Gráfico de Horizonte -->
+    <div class="section" id="horizon-chart">
+        <h2>Gráfico de Horizonte de Intensidad de Carbono</h2>
+        <div class="content">
+            <img src="example/ruta-a-tu-imagen-horizonte.jpg" alt="Ejemplo de Gráfico de Horizonte">
+            <p><strong>Origen:</strong> El gráfico de horizonte se usa para visualizar cambios en series temporales. En esta visualización, analizamos el cambio porcentual en la intensidad de carbono a lo largo del tiempo.</p>
+        </div>
+        <p><strong>Pros y Contras:</strong> Es ideal para ver cambios positivos y negativos en una misma gráfica, pero puede resultar complicado para audiencias no familiarizadas con la técnica.</p>
+        <p><strong>Aplicaciones:</strong> Se emplea en análisis financieros y ambientales para mostrar tendencias de cambio respecto a un valor inicial.</p>
+        <p><strong>Datos utilizados:</strong> Series temporales de cambios en la intensidad de carbono para distintos portafolios y benchmarks.</p>
+
+        <div class="plot-container">
+            <!-- Inserta el archivo HTML de la visualización del gráfico de horizonte -->
+            <iframe src="charts/horizon_chart.html" width="100%" height="500px" style="border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Cierre -->
+    <div class="section">
+        <h2>Conclusiones</h2>
+        <p>Estas tres técnicas de visualización permiten comprender los datos de manera diferente y resaltar aspectos clave. La pirámide destaca proporciones, el mapa de flujo permite visualizar direcciones y magnitudes, mientras que el gráfico de horizonte facilita ver cambios en tendencias a lo largo del tiempo.</p>
+    </div>
+</body>
+</html>
