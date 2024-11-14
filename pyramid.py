@@ -50,7 +50,7 @@ df_pivot['p3'] = 1.0  # Total cumulative percentage is 100%
 # Calculate heights corresponding to cumulative percentages
 df_pivot['h0'] = 0
 df_pivot['h1'] = np.sqrt(df_pivot['p1']) / 1.65
-df_pivot['h2'] = np.sqrt(df_pivot['p2']) / 1.4
+df_pivot['h2'] = np.sqrt(df_pivot['p2']) / 1.42
 df_pivot['h3'] = 1.0  # Total height normalized to 1
 
 # Calculate bar segment heights
@@ -105,7 +105,7 @@ fig.update_layout(
         showticklabels=False,
         showgrid=False,
         zeroline=False,
-        range=[-0.866, 0.866]
+        range=[-0.5, 0.4]
     ),
     yaxis=dict(
         showticklabels=False,
@@ -114,12 +114,14 @@ fig.update_layout(
         range=[0, 1]
     ),
     plot_bgcolor='white',
-    height=600,
-    width=1200,
-    title={
-        'text': f'{portfolios[0].replace('_',' ')}',
-        'x': 0.3,
-    },
+    height=550,
+    width=850,
+    margin=dict(l=0, r=0, t=0, b=70),  # No margins
+    # title={
+    #     'text': f'{portfolios[0].replace('_',' ')}',
+    #     'x': 0.08,
+    #     'y': 1,
+    # },
     shapes=[
         # Left triangle to create the pyramid effect
         dict(
@@ -162,7 +164,7 @@ for portfolio_id in portfolios:
 
     # Calculate positions for annotations
     y_pos = 0
-    annotation_xs = [[0.05]] * 3  # Positions on the right side
+    annotation_xs = [[0.03]] * 3  # Positions on the right side
     annotation_ys = []
     annotation_texts = []
     for i in range(3):
@@ -217,7 +219,7 @@ for data in portfolio_data_list:
                 'text': text_values,
                 'x': x_values
             },
-            {'title': f'{portfolio_id.replace('_',' ')}'}
+            # {'title': f'{portfolio_id.replace('_',' ')}'}
         ]
     )
     buttons.append(button)
@@ -229,15 +231,15 @@ fig.update_layout(
             buttons=buttons,
             direction='down',
             showactive=True,
-            x=0.8,
+            x=0.1,
             xanchor='left',
-            y=0.5,
+            y=1,
             yanchor='middle'
         )
     ],
     legend=dict(
-        x=0.79,
-        y=0.8,
+        x=0.85,
+        y=0.95,
         xanchor='left',
         yanchor='middle'
     )

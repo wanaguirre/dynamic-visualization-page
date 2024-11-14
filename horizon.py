@@ -392,13 +392,13 @@ for i in range(1, num_portfolios + 1):
     # Benchmark subplot (Right)
     fig.update_yaxes(
         tickvals=y_tick_vals,  # Set tick values
-        ticktext=y_tick_text,  # Set tick text with % sign
+        ticktext=[''] * len(y_tick_text),  # Set tick text with % sign
         showticklabels=True,
         showgrid=False,
         zeroline=False,
         row=i,
         col=2,
-        range=[0, 20]
+        range=[0, 20],
     )
 
     if i == num_portfolios:
@@ -444,11 +444,11 @@ for i in range(1, num_portfolios + 1):
 
 # Update the layout of the figure
 fig.update_layout(
-    height=150 * num_portfolios,  # Adjust height based on number of portfolios
-    width=1500,
+    height=105 * num_portfolios,  # Adjust height based on number of portfolios
+    width=910,
     hovermode='x unified',
     template='simple_white',
-    margin=dict(l=100, r=200, t=50, b=100)
+    margin=dict(l=60, r=140, t=35, b=60)
 )
 
 # Create color legend manually, ordered from +100% at the top to -100% at the bottom
@@ -517,6 +517,10 @@ fig.update_layout(
         )
         for annotation in fig['layout']['annotations']
     ]
+)
+
+fig.update_layout(
+    margin=dict(l=0, r=0, t=20, b=60)
 )
 
 # Display the figure

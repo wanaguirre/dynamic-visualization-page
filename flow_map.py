@@ -70,8 +70,8 @@ for idx, (portfolio, countries) in enumerate(portfolio_data.items()):
                 side="top"   # Position the title at the top of the color bar
             ),
             thickness=0.05,    # Increased thickness for larger colorbar
-            len=1.11,         # Increased length for larger colorbar
-            y=0.527,           # Center the colorbar vertically
+            len=1,         # Increased length for larger colorbar
+            y=0.55,           # Center the colorbar vertically
             x=1.01,           # Position to the right of the map
             lenmode='fraction',
             thicknessmode='fraction'
@@ -100,7 +100,7 @@ for idx, (portfolio, countries) in enumerate(portfolio_data.items()):
             text=(
                 f"Destination: {data['Destination_Country']}<br>"
                 f"Investment Percentage: {data['Investment_Percentage']:.2f}%<br>"
-                f"Portfolio: {portfolio}"
+                f"Portfolio: {portfolio.replace('_',' ')}"
             ),
             showlegend=False,
             visible=(idx == 0)  # Only the first portfolio's flow lines are visible initially
@@ -127,11 +127,11 @@ for idx, portfolio in enumerate(portfolios):
     
     # Create the button dictionary
     button = dict(
-        label=portfolio,
+        label=portfolio.replace('_',' '),
         method="update",
         args=[
             {"visible": visibility},
-            {"title": f"{portfolio.replace('_',' ')}"}
+            # {"title": f"{portfolio.replace('_',' ')}"}
         ]
     )
     buttons.append(button)
@@ -143,9 +143,9 @@ fig.update_layout(
             buttons=buttons,
             direction="down",
             showactive=True,
-            x=0.88,        # Position the dropdown on the right
+            x=0,        # Position the dropdown on the right
             xanchor="left",
-            y=1.067,        # Align to the top
+            y=1.03,        # Align to the top
             yanchor="top"
         )
     ],
@@ -157,12 +157,13 @@ fig.update_layout(
         countrycolor="white",
         showcountries=True
     ),
-    height=800,
-    width=1500,          # Increased width to accommodate colorbar and dropdown
-    title={
-        'text': f'{portfolios[0].replace('_',' ')}',
-        'x': 0.077,
-    },
+    height=500,
+    width=900,          # Increased width to accommodate colorbar and dropdown
+    margin=dict(l=0, r=0, t=0, b=0),
+    # title={
+    #     'text': f'{portfolios[0].replace('_',' ')}',
+    #     'x': 0.077,
+    # },
 )
 
 # Show the figure
