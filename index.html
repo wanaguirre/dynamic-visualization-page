@@ -65,23 +65,23 @@
         section.centered-content {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centrar verticalmente */
-            align-items: center;     /* Centrar horizontalmente */
+            justify-content: center; 
+            align-items: center;  
             padding: 0 50px;
             height: 100%;
             box-sizing: border-box;
         }
 
         section.centered-content h2 {
-            margin: 0 0 20px 0; /* Espacio debajo del título */
+            margin: 0 0 20px 0; 
             text-align: center;
         }
 
         section.centered-content ul {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Center list items vertically within the list */
-            align-items: flex-start; /* Align items to the left */
+            justify-content: center; 
+            align-items: flex-start; 
             list-style: disc;
             margin: 0;
             padding: 0;
@@ -92,10 +92,9 @@
         }
 
         section.centered-content li {
-            margin-bottom: 10px; /* Espacio entre elementos de la lista */
+            margin-bottom: 10px; 
         }
 
-        /* Nueva clase para diapositivas con imagen a la derecha */
         section.content-slide {
             position: relative;
             height: 100%;
@@ -104,10 +103,9 @@
         }
 
         section.content-slide .text-content {
-            /* margin-right: 300px; Ajustar según el ancho de la imagen */
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align items to the top */
+            justify-content: flex-start;
             height: 100%;
             box-sizing: border-box;
         }
@@ -138,12 +136,12 @@
         section.content-slide .slide-image {
             position: absolute;
             top: 52%;
-            right: 0px; /* Ajustar según sea necesario */
+            right: 0px; 
             transform: translateY(-50%);
         }
 
         section.content-slide .slide-image img {
-            max-width: 400px; /* Ajustar según sea necesario */
+            max-width: 400px; 
             height: auto;
         }
 
@@ -159,7 +157,6 @@
             width: 100%;
             height: 100%;
             z-index: 1;
-            /* overflow: hidden; Asegura que no haya barras de desplazamiento */
         }
         section.fullscreen-visualization .iframe-container iframe {
             width: 100%;
@@ -309,7 +306,6 @@
             <section class="fullscreen-visualization">
                 <h2>Progreso Intensidad de Emisiones de Carbono</h2>
                 <div class="iframe-container">
-                    <!-- Reemplaza con la ruta a tu archivo HTML del gráfico de horizonte -->
                     <iframe src="charts/horizon_chart.html" allowfullscreen></iframe>
                 </div>
                 <p class="description">
