@@ -120,13 +120,13 @@
         section.content-slide .text-content ul {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Center list items vertically within the list */
-            align-items: flex-start; /* Align items to the left */
+            justify-content: center; 
+            align-items: flex-start;
             list-style: disc;
             margin: 0;
             padding: 0;
             max-width: 800px;
-            font-size: 30px;
+            font-size: 20px;
             height: 80%;
             text-align: left;
         }
@@ -198,7 +198,7 @@
                 </div>
                 <div class="footnote">
                     <p>Visualización de datos</p>
-                    <p>Juan Aguirre Calderón - 2024-11-10</p>
+                    <p>Juan Aguirre Calderón - 2024-11-19</p>
                 </div>
             </section>
 
@@ -208,7 +208,7 @@
                 <ul>
                     <li>Pyramid chart. (Emisiones de carbono)</li>
                     <li>Flow map. (Flujo de Inversiones)</li>
-                    <li>Horizon chart. (Intensidad de Carbono)</li>
+                    <li>Horizon chart. (Intensidad de emisiones de carbono)</li>
                 </ul>
             </section>
 
@@ -217,10 +217,17 @@
                 <div class="text-content">
                     <h2>Pyramid chart</h2>
                     <ul>
-                        <li>Origen y definición</li>
-                        <li>Pros y contras</li>
-                        <li>Tipos de datos que admite</li>
-                        <li>Aplicaciones comunes</li>
+                        <li>Forma piramidal.</li>
+                        <li>Décadas 70-80.</li>
+                        <li>Proporciones de datos categóricos.</li>
+                        <li>Mínimo dos categorías.</li>
+                        <li>Máximo alrededor de 5 categorías,<br>
+                            dependiendo de la legible.</li>
+                        <li>Suman 100%.</li>
+                        <li>(+) Jerarquía evidente.</li>
+                        <li>(+-) Comparación sencilla, no evidente.</li>
+                        <li>(-) Precisión limitada.</li>
+                        <li>Marketing, ventas, educación...</li>
                     </ul>
                 </div>
                 <div class="slide-image">
@@ -232,8 +239,10 @@
             <section class="fullscreen-visualization">
                 <h2>Pirámide de Emisiones</h2>
                 <p class="description">
-                    Visualización de las emisiones de carbono clasificadas en Scope 1, Scope 2 y Scope 3.
-                    Esta pirámide muestra la proporción de cada scope, permitiendo identificar áreas clave para la reducción de emisiones.
+                    Distribución de las emisiones de carbono de las inversiones de cada portfolio.<br>
+                    Scope 1: Emisiones directas provenientes de fuentes propias o controladas por la empresa.<br>
+                    Scope 2: Emisiones indirectas derivadas de la generación de energía comprada.<br>
+                    Scope 3: Todas las demás emisiones indirectas en la cadena de valor.
                 </p>
                 <div class="iframe-container">
                     <iframe src="charts/pyramid_chart.html" scrolling="no"></iframe>
@@ -245,10 +254,17 @@
                 <div class="text-content">
                     <h2>Flow Map</h2>
                     <ul>
-                        <li>Origen y definición</li>
-                        <li>Pros y contras</li>
-                        <li>Tipos de datos que admite</li>
-                        <li>Aplicaciones típicas</li>
+                        <li>Representa movimientos entre regiones.</li>
+                        <li>Siglo XIX, aunque pudo ser usada desde<br>
+                        la creación de los primeros mapas.</li>
+                        <li>Datos geográficos con volumenes de flujo.</li>
+                        <li>(+) Visualización clara.</li>
+                        <li>(+) Información cuantitativa.</li>
+                        <li>(+) Contexto geográfico.</li>
+                        <li>(-) Saturación visual.</li>
+                        <li>(-) Superposición líneas.</li>
+                        <li>Migración poblacional, Comercio y logística,<br>
+                        Flujo de información, Análisis ambiental...</li>
                     </ul>
                 </div>
                 <div class="slide-image">
@@ -258,14 +274,14 @@
 
             <!-- Sexta Diapositiva: Visualización Mapa de Flujo -->
             <section class="fullscreen-visualization">
-                <h2>Mapa de Flujo</h2>
+                <h2>Flujo de Inversiones</h2>
                 <div class="iframe-container">
                     <!-- Reemplaza con la ruta a tu archivo HTML del mapa de flujo -->
                     <iframe src="charts/flow_map.html" scrolling="no"></iframe>
                 </div>
                 <p class="description">
-                    Visualización de las inversiones entre países, mostrando las rutas y volúmenes de inversión.
-                    El mapa destaca los principales flujos y patrones geográficos en las inversiones internacionales.
+                    Distribución de inversiones de cada portfolio países, mostrando los volúmenes de inversión.<br>
+                    El mapa destaca los principales flujos y patrones geográficos de las inversiones.
                 </p>
             </section>
 
@@ -274,10 +290,14 @@
                 <div class="text-content">
                     <h2>Horizon Chart</h2>
                     <ul>
-                        <li>Origen y definición</li>
-                        <li>Pros y contras</li>
-                        <li>Tipos de datos que admite</li>
-                        <li>Aplicaciones típicas</li>
+                        <li>Comparación simultanea de series temporales.</li>
+                        <li>Introducido años 2000.</li>
+                        <li>(+) Compacto y eficiente.</li>
+                        <li>(+) Comparación simultánea.</li>
+                        <li>(+) Destaca variaciones.</li>
+                        <li>(-) Interpretación compleja.</li>
+                        <li>(-) Curva aprendizaje.</li>
+                        <li>Finanzas, Meteorología, Monitoreo de rendimiento…</li>
                     </ul>
                 </div>
                 <div class="slide-image">
@@ -287,14 +307,14 @@
 
             <!-- Octava Diapositiva: Visualización Gráfico de Horizonte -->
             <section class="fullscreen-visualization">
-                <h2>Gráfico de Horizonte</h2>
+                <h2>Progreso Intensidad de Emisiones de Carbono</h2>
                 <div class="iframe-container">
                     <!-- Reemplaza con la ruta a tu archivo HTML del gráfico de horizonte -->
                     <iframe src="charts/horizon_chart.html" allowfullscreen></iframe>
                 </div>
                 <p class="description">
-                    Visualización de los cambios porcentuales en la intensidad de carbono a lo largo del tiempo para distintos portafolios y benchmarks.
-                    El gráfico permite comparar fácilmente las variaciones positivas y negativas en la intensidad de carbono.
+                    Cambios porcentuales en la intensidad de emisiones de carbono a lo largo del tiempo para distintos portafolios y sus respectivos benchmarks.<br>
+                    Intensidad de emisiones de carbono: Cantidad de gases de efecto invernadero emitidos por cada unidad de capital invertido, reflejando el impacto ambiental agregado de las inversiones realizadas.
                 </p>
             </section>
 
@@ -308,7 +328,7 @@
                 </div>
                 <div class="footnote">
                     <p>Visualización de datos</p>
-                    <p>Juan Aguirre Calderón - 2024-11-10</p>
+                    <p>Juan Aguirre Calderón - 2024-11-19</p>
                 </div>
             </section>
 
